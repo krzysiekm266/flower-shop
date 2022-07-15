@@ -1,0 +1,11 @@
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1f 1f ;
+
+}
+
+.nav-link {
+  width: 100px;
+  height: 100px;
+}

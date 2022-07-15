@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,body,main {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+body {
+  background-image: url('/assets/images/nav/flower-bg-main.jpg');
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  background-attachment: fixed;
+}
+:root {
+  --var-bg-color: rgb(226, 214, 214);
+}
