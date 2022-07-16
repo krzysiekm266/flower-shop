@@ -1,11 +1,52 @@
 
 .navigation {
   display: grid;
-  grid-template-columns: 1f 1f ;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  'four'
+  'five'
+  'six';
+  margin-bottom: 1rem;overflow: auto;
+}
+@media screen and (min-width:600px) {
+  .navigation {
+    grid-template-areas:
+    'one two'
+    'three four'
+    'five six';
+  }
+};
+.nav-link-size {
+  width: auto;
+  height: auto;
 
 }
+.nav-link-border {
+  border:none;
+}
+.nav-link-1 {
 
-.nav-link {
-  width: 100px;
-  height: 100px;
+  grid-area: one;
+}
+
+.nav-link-2 {
+  grid-area: two;
+}
+
+.nav-link-3 {
+  grid-area: three;
+}
+
+.nav-link-4 {
+  grid-area: four;
+}
+.nav-link-5 {
+  grid-area: five;
+}
+.nav-link-6 {
+  grid-area: six;
 }

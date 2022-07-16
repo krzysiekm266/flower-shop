@@ -1,13 +1,13 @@
-<main>
-  <nav>
-    <app-navigation>
-      <app-navigation-button [text]="'flower1'" [bgImage]="'flower-blue.jpg'" [width]="'200px'" [height]="'200px'" ></app-navigation-button>
-      <app-navigation-button [text]="'flower2'" [bgImage]="'flower-mix.jpg'" [width]="'200px'" [height]="'200px'" ></app-navigation-button>
-      <app-navigation-button [text]="'flower3'" [bgImage]="'flower-pink.jpg'" [width]="'200px'" [height]="'200px'" ></app-navigation-button>
-      <app-navigation-button [text]="'flower4'" [bgImage]="'flower-vase.jpg'" [width]="'200px'" [height]="'200px'" ></app-navigation-button>
-    </app-navigation>
-  </nav>
-  <router-outlet></router-outlet>
+<main class="app">
+  <div class="app-menu">
+    <app-menu></app-menu>
+  </div>
+
+  <div class="app-navigation">
+    <!-- <app-navigation></app-navigation> -->
+    <router-outlet></router-outlet>
+  </div>
+
 </main>
 
 

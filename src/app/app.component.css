@@ -1,0 +1,27 @@
+.app {
+ display: grid;
+ width: 100vw;
+ height: 100vh;
+ grid-template-columns: 1fr;
+ grid-template-areas:
+ 'menu'
+ 'navigation';
+}
+.app-menu {
+  grid-area: menu;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 40vh;
+  mix-blend-mode: multiply;
+  background-color: var(--color-nav-bg);
+
+
+}
+
+.app-navigation {
+
+  grid-area: navigation;
+  height: auto;
+
+}

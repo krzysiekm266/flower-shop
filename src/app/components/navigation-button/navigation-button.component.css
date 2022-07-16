@@ -1,9 +1,31 @@
 .navigation-button {
-  background-color: var(--var-bg-color);
-  background-blend-mode: darken;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode:multiply ;
+  background-position: center;
+  background-size: cover;
+  padding: 0.5em;
+
 }
-.font {
-  font-size: 24px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.navigation-button:hover {
+  cursor: pointer;
+  mix-blend-mode: initial;
+}
+.button-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Arial;
+  color:aliceblue;
+  text-shadow: 3px 3px 3px black;
+}
+@media screen and (min-width:600px) {
+  .button-text {
+    font-size: 2.5em;
+  };
+  @media screen and (min-width:800px) {
+    .button-text {
+      font-size: 3em;
+    };
+  }
 }
