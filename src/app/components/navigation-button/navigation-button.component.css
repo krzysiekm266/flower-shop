@@ -23,9 +23,10 @@
   .button-text {
     font-size: 2.5em;
   };
-  @media screen and (min-width:800px) {
-    .button-text {
-      font-size: 3em;
-    };
-  }
+
+}
+@media screen and (min-width:800px) {
+  .button-text {
+    font-size: 3em;
+  };
 }
