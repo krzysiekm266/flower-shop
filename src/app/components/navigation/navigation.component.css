@@ -3,6 +3,7 @@
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
+  gap: 0.3em;
   grid-template-areas:
   'one'
   'two'
@@ -10,10 +11,15 @@
   'four'
   'five'
   'six';
-  margin-bottom: 1rem;overflow: auto;
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+.navigation:first-child {
+  margin-top: 0.3em;
 }
 @media screen and (min-width:600px) {
   .navigation {
+    gap: 1em;
     grid-template-areas:
     'one two'
     'three four'

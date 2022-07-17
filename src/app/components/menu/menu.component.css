@@ -1,15 +1,27 @@
 .menu {
-
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
   width: 100vw;
-  background-color: aliceblue;
-
-
+  /* background-color: aliceblue; */
 
 }
+
+.menu::after {
+  position: absolute;
+
+  bottom: 0;
+
+  content:'';
+  width:95%;
+  height: 2px;
+  margin: auto;
+  background-color:black;
+}
+
 .menu a {
   padding: 2em;
 }

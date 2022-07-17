@@ -3,8 +3,10 @@
   align-items: center;
   justify-content: center;
   mix-blend-mode:multiply ;
-  background-position: center;
+  background-position: top left;
   background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 20vh;
   padding: 0.5em;
 
 }
