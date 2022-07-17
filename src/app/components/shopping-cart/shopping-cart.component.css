@@ -1,0 +1,5 @@
+.shopping-cart {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+}

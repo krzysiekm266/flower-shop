@@ -1,0 +1,36 @@
+.product {
+  display: grid;
+  gap: 0.4em;
+  width:auto;
+  overflow: auto;
+  grid-template-areas:
+  'category  category category '
+  'name price quantity'
+  'description description description';
+}
+
+.grid-area-category {
+  grid-area: category ;
+
+}
+.grid-area-id {
+  grid-area: id;
+}
+.grid-area-name {
+  grid-area: name;
+}
+.grid-area-price {
+  grid-area: price;
+}
+.grid-area-quantity {
+  grid-area: quantity;
+}
+.grid-area-description {
+  grid-area: description;
+}
+.border-2-black {
+  border: 2px solid black;
+}
+.grid-area-padding {
+  padding: 0.5em;
+}

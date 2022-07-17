@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --color-nav-bg: rgb(241, 208, 16);
-  --color-menu-text: black;
+  --color-menu-text: rgb(247, 183, 8);
 }
 
 *,*::before,*::after {
@@ -28,4 +28,7 @@ body {
 }
 .bg-color-primary {
   background-color: var(--color-nav-bg);
+}
+.font-Arial {
+  font-family: Arial;
 }

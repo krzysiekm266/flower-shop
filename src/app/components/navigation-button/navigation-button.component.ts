@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navigation-button',
@@ -10,6 +10,7 @@ export class NavigationButtonComponent implements OnInit {
   @Input() bgImage:string = '';
   @Input() width:string = '100%';
   @Input() height:string = '100%';
+  @Output() textEmit = new EventEmitter<string>();
   imgPath:string = 'assets/images/nav/';
   constructor() { }
 
@@ -19,6 +20,9 @@ export class NavigationButtonComponent implements OnInit {
     this.bgImage  = 'url('+ img+')';
     console.log(this.bgImage);
 
+  }
+  clickLink() {
+    return this.textEmit.emit(this.text);
   }
 
 }

@@ -1,21 +1,22 @@
 <nav class="navigation ">
-  <app-navigation-button class="nav-link-1 nav-link-size nav-link-border" [text]="'Roses'"
-    [bgImage]="'flower-blue.jpg'">
+  <app-navigation-button [routerLink]="['products',buttonText]" (textEmit)="onNavLinkClicked($event)"
+    class="nav-grid-area-roses nav-link-size nav-link-border" [text]="'Roses'" [bgImage]="'flower-roses.jpg'">
   </app-navigation-button>
-  <app-navigation-button class="nav-link-2 nav-link-size  nav-link-border" [text]="'Bouquets'"
-    [bgImage]="'flower-mix.jpg'">
+  <app-navigation-button [routerLink]="['products',buttonText]" (textEmit)="onNavLinkClicked($event)"
+    class="nav-grid-area-bouquets nav-link-size  nav-link-border" [text]="'Bouquets'" [bgImage]="'flower-bouquets.jpg'">
   </app-navigation-button>
-  <app-navigation-button class="nav-link-3 nav-link-size  nav-link-border" [text]="'Flower Arrangements'"
-    [bgImage]="'flower-pink.jpg'">
+  <app-navigation-button [routerLink]="['products',buttonText]" (textEmit)="onNavLinkClicked($event)"
+    class="nav-grid-area-flower-arrangements nav-link-size  nav-link-border" [text]="'Flower Arrangements'"
+    [bgImage]="'flower-arrangements.jpg'">
   </app-navigation-button>
-  <app-navigation-button class="nav-link-4 nav-link-size  nav-link-border" [text]="'Plants'"
-    [bgImage]="'flower-vase.jpg'">
+  <app-navigation-button [routerLink]="['products',buttonText]" (textEmit)="onNavLinkClicked($event)"
+    class="nav-grid-area-plants nav-link-size  nav-link-border" [text]="'Plants'" [bgImage]="'flower-plants.jpg'">
   </app-navigation-button>
-  <app-navigation-button class="nav-link-5 nav-link-size  nav-link-border" [text]="'Sunflowers'"
-    [bgImage]="'flower-vase.jpg'">
+  <app-navigation-button [routerLink]="['products',buttonText]" (textEmit)="onNavLinkClicked($event)"
+    class="nav-grid-area-sunflowers nav-link-size  nav-link-border" [text]="'Sunflowers'" [bgImage]="'flower-sunflowers.jpg'">
   </app-navigation-button>
-  <app-navigation-button class="nav-link-6 nav-link-size  nav-link-border" [text]="'Spring flowers'"
-  [bgImage]="'flower-spring.jpg'">
-</app-navigation-button>
+  <app-navigation-button [routerLink]="['products',buttonText]" (textEmit)="onNavLinkClicked($event)"
+    class="nav-grid-area-spring-flowers nav-link-size  nav-link-border" [text]="'Spring flowers'" [bgImage]="'flower-spring.jpg'">
+  </app-navigation-button>
 
 </nav>
