@@ -11,6 +11,8 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
  import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductService } from './services/product.service';
 import { ProductComponent } from './components/product/product.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { SocialMediaComponent } from './components/social-media/social-media.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProductComponent } from './components/product/product.component';
     MenuComponent,
     ProductListComponent,
     ShoppingCartComponent,
-    ProductComponent
+    ProductComponent,
+    LogoComponent,
+    SocialMediaComponent
   ],
   imports: [
     BrowserModule,

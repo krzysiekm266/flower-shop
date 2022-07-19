@@ -3,12 +3,14 @@
   align-items: center;
   justify-content: center;
   mix-blend-mode:multiply ;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   min-height: 20vh;
   padding: 0.5em;
 
+}
+.bg-img-center {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .navigation-button-shadow {
   box-shadow: 3px 3px 5px 1px black;
@@ -16,6 +18,8 @@
 .navigation-button:hover {
   cursor: pointer;
   mix-blend-mode: initial;
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
 }
 .button-text {
   font-size: 1.5em;
@@ -24,13 +28,16 @@
   color:aliceblue;
   text-shadow: 3px 3px 3px black;
 }
-@media screen and (min-width:600px) {
+@media screen and (min-width: 600px) {
   .button-text {
     font-size: 2.5em;
   };
 
 }
-@media screen and (min-width:800px) {
+@media screen and (min-width: 800px) {
+  .navigation-button {
+    min-height: 40vh;
+  }
   .button-text {
     font-size: 3em;
   };

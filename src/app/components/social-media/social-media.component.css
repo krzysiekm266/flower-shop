@@ -1,0 +1,29 @@
+.social-media {
+  display: grid;
+  grid-template-areas: 'contact social-icons';
+  background-color: var(--color-bg-social-media);
+  height: 2.5em;
+  padding-inline: 1em;
+}
+.grid-area-contact {
+  grid-area: contact;
+  place-content: center left;
+  display: flex;
+  align-items: center;
+
+}
+.grid-area-social-icons {
+  grid-area: social-icons;
+  place-content: center right;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+p {
+  display: block;
+  /* background-color: antiquewhite; */
+}
+.social-media-text {
+  color: var(--color-text-social-media);
+  font-size: 1em;
+}

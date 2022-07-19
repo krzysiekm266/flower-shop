@@ -4,28 +4,30 @@
  height: auto;
 
  grid-template-areas:
+ 'logo'
  'menu'
+ 'social-media'
  'navigation';
 }
-.app-menu {
-
-  grid-area: menu;
-  height: auto;
-
+.logo {
+  grid-area: logo;
 }
-
+.app-menu {
+  grid-area: menu;
+  position: sticky;
+  top:0;
+  z-index:1000;
+}
+.social-media {
+  grid-area: social-media;
+}
 .app-navigation {
-
   grid-area: navigation;
-  padding-block: 1em;
-  padding-inline:0.3em;
   height: 100vh;
-  overflow: auto;
-
 }
 @media screen and (min-width:600px) {
   .app-navigation {
-    place-self: center;
-    padding-inline:1em;
+    place-self: center stretch;
+    /* padding-inline:1em; */
   }
 }

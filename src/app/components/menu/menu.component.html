@@ -1,7 +1,17 @@
 <header class=" menu font-Arial">
-  <a class="menu-link menu-text " href="">home</a>
-  <a class="menu-link menu-text "  href="">about</a>
-  <a class="menu-link menu-text "  href="">
-    <fa-icon class="cart"  [icon]="faCartShopping" [size]="'2x'"></fa-icon>
-  </a>
+  <div class="hamburger grid-area-hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class=" menu-nav grid-area-menu-nav">
+    <a class="menu-link menu-text " href="">home</a>
+    <a class="menu-link menu-text "  href="">about</a>
+  </div>
+  <div class=" cart grid-area-cart">
+    <a>
+      <fa-icon class="cart-icon"  [icon]="faCartShopping" [size]="'2x'"></fa-icon>
+    </a>
+  </div>
 </header>

@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --color-nav-bg: rgb(241, 208, 16);
-  --color-menu-text: rgb(247, 183, 8);
+
+  --color-text-logo:white;
+  --color-text-menu:black;
+  --color-text-social-media:yellow;
+  --color-menu-text-hover:rgb(59, 10, 105);
+  --color-bg-social-media:black;
+  --color-bg-menu:rgb(21, 196, 21);
+
+
+
 }
 
 *,*::before,*::after {
