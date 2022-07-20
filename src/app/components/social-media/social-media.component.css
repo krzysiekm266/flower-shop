@@ -19,6 +19,9 @@
   align-items: center;
   gap: 1em;
 }
+.grid-area-social-icons:last-child {
+  margin-right: 1em;
+}
 p {
   display: block;
   /* background-color: antiquewhite; */

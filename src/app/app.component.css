@@ -21,13 +21,14 @@
 .social-media {
   grid-area: social-media;
 }
-.app-navigation {
+.app-content {
   grid-area: navigation;
   height: 100vh;
 }
 @media screen and (min-width:600px) {
-  .app-navigation {
+  .app-content {
     place-self: center stretch;
     /* padding-inline:1em; */
   }
 }
+

@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-
+  scroll-behavior: smooth;
   --color-text-logo:white;
   --color-text-menu:black;
   --color-text-social-media:yellow;
   --color-menu-text-hover:rgb(59, 10, 105);
   --color-bg-social-media:black;
   --color-bg-menu:rgb(21, 196, 21);
+  --color-bg-product:aliceblue;
 
 
 
@@ -28,7 +29,7 @@ html,body {
 
 body {
 
-  background-image: url('/assets/images/nav/flower-bg-main.jpg');
+  background-image: url('/assets/images/bg/bg-main-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
