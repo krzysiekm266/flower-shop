@@ -19,14 +19,16 @@
   align-items: center;
   gap: 1em;
 }
-.grid-area-social-icons:last-child {
-  margin-right: 1em;
-}
-p {
-  display: block;
-  /* background-color: antiquewhite; */
-}
+
+
+
 .social-media-text {
   color: var(--color-text-social-media);
   font-size: 1em;
+}
+fa-icon {
+ padding: 4px;
+}
+fa-icon:hover {
+  color: var(--color-text-social-media-hover);
 }

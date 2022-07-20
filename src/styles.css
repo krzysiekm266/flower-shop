@@ -3,7 +3,8 @@
   scroll-behavior: smooth;
   --color-text-logo:white;
   --color-text-menu:black;
-  --color-text-social-media:yellow;
+  --color-text-social-media:white;
+  --color-text-social-media-hover:rgb(14, 185, 14);
   --color-menu-text-hover:rgb(59, 10, 105);
   --color-bg-social-media:black;
   --color-bg-menu:rgb(21, 196, 21);

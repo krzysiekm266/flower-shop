@@ -13,6 +13,7 @@ import { ProductService } from './services/product.service';
 import { ProductComponent } from './components/product/product.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
     ShoppingCartComponent,
     ProductComponent,
     LogoComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
