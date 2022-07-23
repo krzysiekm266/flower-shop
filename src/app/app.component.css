@@ -2,12 +2,14 @@
  display: grid;
  width: 100vw;
  height: auto;
+ overflow: auto;
 
  grid-template-areas:
  'logo'
- 'menu'
  'social-media'
- 'navigation';
+ 'menu'
+ 'content'
+ 'footer';
 }
 .logo {
   grid-area: logo;
@@ -18,12 +20,12 @@
   top:0;
   z-index:1000;
 }
-.social-media {
+.app-social-media {
   grid-area: social-media;
 }
 .app-content {
-  grid-area: navigation;
-  height: 100vh;
+  grid-area: content;
+  min-height: 80vh;
 }
 @media screen and (min-width:600px) {
   .app-content {

@@ -11,6 +11,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductListComponent implements OnInit {
   @Input() category:string = 'category';
   @Input() description:string = 'description';
+  @Input() bgImage:string ='';
   @Input() products:Product[] = [];
   constructor(private _route:ActivatedRoute,private _productService:ProductService) { }
 

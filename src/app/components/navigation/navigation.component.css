@@ -2,8 +2,7 @@
 .navigation {
   display: grid;
   grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  /* gap: 0.4em; */
+  /* grid-auto-rows: 1fr auto-fill; */
   grid-template-areas:
   'roses'
   'bouquets'
@@ -11,10 +10,6 @@
   'plants'
   'sunflowers'
   'spring-flowers';
-  /* padding: 1em; */
-  margin-bottom: 1rem;
-  overflow: auto;
-  opacity: 1;
 }
 .navigation:first-child {
   margin-top: 0em;
@@ -39,12 +34,13 @@
 }
 @media screen and (min-width: 600px) {
   .navigation {
-    /* gap: 1em; */
     grid-template-areas:
     'roses bouquets'
     'flower-arrangements  plants'
     'sunflowers spring-flowers';
+
   }
+
 };
 .nav-link-size {
   width: auto;

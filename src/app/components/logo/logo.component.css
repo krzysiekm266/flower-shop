@@ -18,6 +18,6 @@ h1  {
 }
 .logo-text {
   font-family: 'Tangerine', serif;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   color: var(--color-text-logo);
 }

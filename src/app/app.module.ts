@@ -14,6 +14,7 @@ import { ProductComponent } from './components/product/product.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ProductComponent,
     LogoComponent,
     SocialMediaComponent,
-    FooterComponent
+    FooterComponent,
+    MenuMobileComponent
   ],
   imports: [
     BrowserModule,

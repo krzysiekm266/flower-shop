@@ -24,7 +24,7 @@
 
 .social-media-text {
   color: var(--color-text-social-media);
-  font-size: 1em;
+  font-size: 1rem;
 }
 fa-icon {
  padding: 4px;
