@@ -1,8 +1,12 @@
 <section class="product-list">
-  <h2 class="category">{{category}}</h2>
-  <section class="description">
-    {{description}}
-  </section>
-  <app-product *ngFor="let item of products" [product]="item"></app-product>
+  <div class="list-info">
+    <h2 class="category">{{category}}</h2>
+    <section class="description">
+      {{description}}
+    </section>
+  </div>
+  <div class="list-items">
+    <app-product *ngFor="let item of products" [product]="item"></app-product>
+  </div>
   <a [routerLink]="'/'">back</a>
 </section>

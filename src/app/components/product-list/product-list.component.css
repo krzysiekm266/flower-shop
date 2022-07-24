@@ -14,6 +14,12 @@
 .product-list:first-child {
   margin-top: 1em;
 }
+.category {
+  background-color: var(--color-bg-product-list);
+}
+.description {
+  background-color: var(--color-bg-product-list);
+}
 @media screen and (min-width:800px) {
   .product-list {
     width: 60%;

@@ -2,7 +2,7 @@
  display: grid;
  width: 100vw;
  height: auto;
- overflow: auto;
+
 
  grid-template-areas:
  'logo'
@@ -17,7 +17,7 @@
 .app-menu {
   grid-area: menu;
   position: sticky;
-  top:0;
+  top:0px;
   z-index:1000;
 }
 .app-social-media {

@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+  margin: auto;
+}
+.footer-text {
+  color:var(--color-text-footer);
+  line-height: 2em;
+}
+.footer-bg {
+  background-color: var(--color-bg-footer);
+
+}
+

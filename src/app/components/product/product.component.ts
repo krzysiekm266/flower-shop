@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Product } from 'src/app/models/Product';
 
 @Component({
@@ -8,10 +9,13 @@ import { Product } from 'src/app/models/Product';
 })
 export class ProductComponent implements OnInit {
   @Input() product!:Product;
-  constructor() { }
+  quantity!:FormControl;
+  constructor() {
+    this.quantity = new FormControl('1');
+   }
 
   ngOnInit(): void {
-
+    this.product.quantity = this.quantity.value as number;
   }
 
 }

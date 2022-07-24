@@ -9,7 +9,7 @@
   'flower-arrangements'
   'plants'
   'sunflowers'
-  'spring-flowers';
+  'summer-flowers';
 }
 .navigation:first-child {
   margin-top: 0em;
@@ -29,7 +29,7 @@
 .bg-color-sunflowers {
   background-color: rgb(216, 152, 13);
 }
-.bg-color-spring-flowers {
+.bg-color-summer-flowers {
   background-color:  rgb(54, 218, 54);
 }
 @media screen and (min-width: 600px) {
@@ -37,7 +37,7 @@
     grid-template-areas:
     'roses bouquets'
     'flower-arrangements  plants'
-    'sunflowers spring-flowers';
+    'sunflowers summer-flowers';
 
   }
 
@@ -69,6 +69,6 @@
 .nav-grid-area-sunflowers {
   grid-area: sunflowers;
 }
-.nav-grid-area-spring-flowers {
-  grid-area: spring-flowers;
+.nav-grid-area-summer-flowers {
+  grid-area: summer-flowers;
 }
