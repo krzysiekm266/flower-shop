@@ -4,11 +4,8 @@
   justify-content: center;
   min-height: 4em;
   padding: 0.5em;
-
-
-
 }
-@media screen and (min-width:600px) {
+@media screen and (min-width: 600px) {
   .navigation-button {
     mix-blend-mode: multiply;
   }
@@ -26,14 +23,12 @@
   mix-blend-mode: initial;
   text-decoration: underline;
   text-underline-offset: 0.5em;
-
-
 }
 .button-text {
   font-size: 2rem;
   font-weight: bold;
   font-family: Arial;
-  color:aliceblue;
+  color: aliceblue;
   line-height: 1.5em;
   text-align: center;
   /* white-space: nowrap; */
@@ -43,7 +38,6 @@
   .button-text {
     font-size: 2.3rem;
   }
-
 }
 @media screen and (min-width: 800px) {
   .navigation-button {

@@ -7,7 +7,7 @@
   padding-inline: 1em;
   width: 100vw;
   background-image: linear-gradient(to right bottom,rgb(5, 119, 5),rgb(124, 250, 124),rgb(199, 252, 199));
-  mix-blend-mode: normal;
+  /* mix-blend-mode: normal; */
   border-bottom: 2px solid black;
 
 }
