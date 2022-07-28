@@ -7,13 +7,20 @@ import { NavigationButtonComponent } from '../navigation-button/navigation-butto
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+  /**
+   *  buttonText is used as route parameter (category name for products list)
+   */
   @Input() buttonText:string ='';
+  @Input() bgImagePath:string = '';
   constructor() { }
 
   ngOnInit(): void {
 
   }
-  onNavLinkClicked(text:string) {
+  onButtonTextSend(text:string) {
     this.buttonText = text;
+  }
+  onBgImagePathSend(bgImgPath:string) {
+    this.bgImagePath = bgImgPath;
   }
 }

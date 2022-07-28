@@ -6,7 +6,8 @@
     <app-social-media></app-social-media>
   </div>
   <nav class="app-menu">
-    <app-menu></app-menu>
+    <app-menu (hamburgerClick)="showMobileMenu()"></app-menu>
+    <app-menu-mobile *ngIf="showMenuMobile" (clickCloseIcon)="hideMobileMenu()"></app-menu-mobile>
   </nav>
 
   <section class="app-content">

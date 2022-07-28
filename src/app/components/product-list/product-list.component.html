@@ -1,11 +1,11 @@
 <section class="product-list">
-  <div class="list-info">
-    <h2 class="category">{{category}}</h2>
+  <div class="list-info grid-area-info">
+    <h2 class="category category-bg-img" [style]="{'background-image':bgImage}">{{category}}</h2>
     <section class="description">
       {{description}}
     </section>
   </div>
-  <div class="list-items">
+  <div class="list-items grid-area-items">
     <app-product *ngFor="let item of products" [product]="item"></app-product>
   </div>
   <a [routerLink]="'/'">back</a>

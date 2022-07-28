@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { faLeaf } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'flower-shop';
+  @Input() showMenuMobile:boolean = false;
+  constructor() {  }
+  showMobileMenu() {
+    this.showMenuMobile = true;
+  }
+  hideMobileMenu() {
+    this.showMenuMobile = false;
+  }
 }

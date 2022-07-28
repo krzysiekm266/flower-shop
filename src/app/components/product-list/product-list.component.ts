@@ -17,6 +17,9 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
      this._route.paramMap.subscribe(param => this.category = param.get('category') as string);
+     let bg = history.state['bg'] as string;
+     this.bgImage = bg;
+     console.log(this.bgImage);
      this.description =  this._productService.getCategoryDescription(this.category);
      this._productService.getProductsByCategory(this.category).subscribe(products => this.products = products);
      document.scrollingElement?.scroll(0,0);

@@ -18,14 +18,15 @@
   grid-area: menu;
   position: sticky;
   top:0px;
-  z-index:1000;
+  z-index:100;
 }
 .app-social-media {
   grid-area: social-media;
 }
 .app-content {
   grid-area: content;
-  min-height: 80vh;
+  min-height: 90vh;
+
 }
 @media screen and (min-width:600px) {
   .app-content {
@@ -33,4 +34,7 @@
     /* padding-inline:1em; */
   }
 }
+.app-footer {
+  grid-area: footer;
 
+}

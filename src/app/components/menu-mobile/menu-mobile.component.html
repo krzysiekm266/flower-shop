@@ -1,3 +1,17 @@
-<div>
+<div class="menu-mobile">
+  <app-navigation-button [routerLink]="['/products/',buttonText]" [state]="{'bg':bgImagePath}"
+    (sendButtonText)="onButtonTextSend($event)" (sendBgImagePath)="onBgImagePathSend($event)"
+    (click)="clickClose()"
+    [text]="'Roses'"
+    [bgImage]="'flower-roses.jpg'"
+    class=""
+    >
+  </app-navigation-button>
 
+  <a href="">bouquets</a>
+   <a href=""> Flower Arrangements</a>
+  <a href=""> Plants</a>
+  <a href=""> Sunflowers</a>
+  <a href="">Summer flowers</a>
+  <a  (click)="clickClose()">Close</a>
 </div>

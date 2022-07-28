@@ -5,8 +5,9 @@
   width:auto;
   height: auto;
   grid-template-areas:
-  'category category category '
-  'name price quantity'
+  /* 'category category category ' */
+  'name name price'
+  'quantity quantity quantity'
   'description description description';
   background-color: var(--color-bg-product);
   opacity: 0.9;
@@ -21,6 +22,16 @@
 }
 .grid-area-name {
   grid-area: name;
+  background-color: rgb(24, 104, 224);
+
+
+}
+.product-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+
 }
 .grid-area-price {
   grid-area: price;
@@ -48,8 +59,8 @@
 .product-button {
   display: inline-block;
   border-style: none;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: auto;
   color:black;
   padding: 0.1em;
 
