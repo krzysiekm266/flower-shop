@@ -26,7 +26,6 @@ export class ProductListComponent implements OnInit,DoCheck ,OnChanges{
   }
 
   ngOnInit(): void {
-
      this._route.paramMap.subscribe(param => this.category = param.get('category') as string);
      let bg = history.state['bg'] as string;
      this.bgImage = bg;
