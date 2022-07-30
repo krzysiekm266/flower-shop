@@ -6,7 +6,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 
 const routes: Routes = [
   // {path:'',redirectTo: '/',pathMatch:'full'}
-  { path:'products/:category' ,component:ProductListComponent ,pathMatch:'full'},
+  { path:'products/:category' ,component:ProductListComponent,outlet:'primary' },
   { path:'',component:NavigationComponent },
   { path:'**',component:NavigationComponent },
 ];

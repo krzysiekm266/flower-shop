@@ -1,5 +1,5 @@
 <div class="menu-mobile">
-  <app-navigation-button [routerLink]="['/products/',buttonText]" [state]="{'bg':bgImagePath}"
+  <app-navigation-button [routerLink]="['./products',buttonText]" [state]="{'bg':bgImagePath}"
     (sendButtonText)="onButtonTextSend($event)" (sendBgImagePath)="onBgImagePathSend($event)"
     (click)="clickClose()"
     [text]="'Roses'"
