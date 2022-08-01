@@ -20,7 +20,5 @@ export class NavigationComponent implements OnInit {
   onButtonTextSend(text:string) {
     this.buttonText = text;
   }
-  onBgImagePathSend(bgImgPath:string) {
-    this.bgImagePath = bgImgPath;
-  }
+
 }

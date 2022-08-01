@@ -9,6 +9,9 @@ export interface Product {
 
 }
 
+/**
+ * This product data is for the demo version
+ */
 export const FLOWERS:Product[] = [
   { id:1,category:'Roses',name:'Red rose',description:'Beautiful red roses from Narnia.',price:4.25,quantity:1,picturePath:'' },
   { id:2,category:'Bouquets',name:'Anniversary bouquet',description:'Beautiful bouquet from far away.',price:12.35,quantity:1,picturePath:'' },

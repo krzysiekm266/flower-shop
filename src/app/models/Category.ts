@@ -2,6 +2,9 @@ export interface Category {
   name:string;
   description:string;
 }
+/***
+ * This table is for the demo version
+ */
 export const CATEGORIES:Category[] = [
   {
     name:'Roses',

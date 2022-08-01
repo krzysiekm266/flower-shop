@@ -10,18 +10,17 @@ export class MenuMobileComponent implements OnInit {
    *  buttonText is used as route parameter (category name for products list)
    */
   @Input() buttonText: string = '';
-  @Input() bgImagePath: string = '';
+
   @Output() clickCloseIcon = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
+
   clickClose() {
     return this.clickCloseIcon.emit();
   }
   onButtonTextSend(text: string) {
     this.buttonText = text;
   }
-  onBgImagePathSend(bgImgPath: string) {
-    this.bgImagePath = bgImgPath;
-  }
+
 }

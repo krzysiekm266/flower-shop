@@ -17,6 +17,9 @@
 .grid-area-items {
   grid-area: items;
 }
+.list-info {
+  border: 2px solid black;
+}
 .category {
   display: flex;
   align-items: center;

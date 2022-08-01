@@ -15,6 +15,8 @@ import { LogoComponent } from './components/logo/logo.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.component';
+import { ConfigService } from './services/config.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,9 +35,10 @@ import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
-  providers: [ProductService],
+  providers: [ProductService,ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

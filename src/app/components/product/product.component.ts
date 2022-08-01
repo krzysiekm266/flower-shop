@@ -9,22 +9,27 @@ import { Product } from 'src/app/models/Product';
 })
 export class ProductComponent implements OnInit {
   @Input() product!:Product;
-  quantity!:FormControl;
+  quantity:FormControl;
   constructor() {
-    this.quantity = new FormControl('1');
+    this.quantity = new FormControl(1);
    }
 
   ngOnInit(): void {
-    this.product.quantity = this.quantity.value as number;
+
+    // this.product.quantity = this.quantity.value as number;
   }
   add() {
-    if(this.product.quantity < 10) {
-      this.product.quantity++;
+    if(this.quantity.value < 10) {
+      let value:number = this.quantity.value;
+      value++;
+      this.quantity.setValue(value);
     }
   }
   subtract() {
-    if(this.product.quantity > 0) {
-      this.product.quantity--;
+    if(this.quantity.value > 1) {
+      let value:number = this.quantity.value;
+      value--;
+      this.quantity.setValue(value);
     }
   }
 }
