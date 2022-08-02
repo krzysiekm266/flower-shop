@@ -37,7 +37,6 @@
   justify-content: space-between;
   gap:0.2em;
 }
-
 .grid-area-description {
   grid-area: description;
 }
@@ -52,16 +51,31 @@
   align-items: center;
   justify-content: center;
   border-style: none;
-
+  width: 25%;
+  height: 100%;
   border: 2px solid black;
-
   color:black;
   padding: 0.1em;
+}
+.quantity-counter {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  gap:1em;
+  align-items: stretch;
+  justify-content: center;
 
 
 }
+label[for='quantity'] {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
 input[id='quantity'] {
-  min-height: 100%;
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
 }
 .product-button-text {
   font-size: 2.2rem;

@@ -16,20 +16,25 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // this.product.quantity = this.quantity.value as number;
   }
-  add() {
-    if(this.quantity.value < 10) {
-      let value:number = this.quantity.value;
-      value++;
-      this.quantity.setValue(value);
+  increase() {
+    if(this.quantity.value < 1000) {
+      this.quantity.setValue(this.quantity.value + 1 );
     }
   }
-  subtract() {
+  decrease() {
     if(this.quantity.value > 1) {
-      let value:number = this.quantity.value;
-      value--;
-      this.quantity.setValue(value);
+      this.quantity.setValue(this.quantity.value - 1);
+    }
+  }
+  increaseBy(value:number) {
+    if(this.quantity.value < 1000) {
+      this.quantity.setValue(this.quantity.value + value);
+    }
+  }
+  decreaseBy(value:number) {
+    if(this.quantity.value > value) {
+      this.quantity.setValue(this.quantity.value - value);
     }
   }
 }
