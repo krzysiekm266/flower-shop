@@ -2,15 +2,14 @@
   display: grid;
   grid-auto-columns: 1fr;
   gap: 0.4em;
-  width:auto;
-  height: auto;
   grid-template-areas:
   /* 'category category category ' */
   'name name price'
   'quantity quantity quantity'
   'description description description';
   background-color: var(--color-bg-product);
-  opacity: 0.9;
+
+
 }
 
 .grid-area-name {
@@ -35,7 +34,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap:0.2em;
+  /* background-color: black; */
+
+
+
 }
 .grid-area-description {
   grid-area: description;
@@ -50,34 +52,44 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap:0.1rem;
   border-style: none;
-  width: 25%;
-  height: 100%;
-  border: 2px solid black;
+  width:15%;
+  height: 60%;
+  border: 1px solid black;
   color:black;
-  padding: 0.1em;
+  background-color: aliceblue;
+  border-radius: 2%;
+  padding: 0.2em;
+}
+
+.product-button-text {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
 }
 .quantity-counter {
   display: flex;
-  width: 100%;
-  min-height: 100%;
   gap:1em;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
 
 
 }
-label[for='quantity'] {
+label.quantity {
  display: flex;
  align-items: center;
  justify-content: center;
+ min-width: 4rem;
+ min-height: 4rem;
+ height: auto;
+ width: auto;
+ padding: 0.1rem;
+ border: 2px solid black;
+ border-radius: 100%;
 }
-input[id='quantity'] {
-  display: block;
-  text-align: center;
+.label-text {
   font-size: 1.5rem;
-}
-.product-button-text {
-  font-size: 2.2rem;
   font-weight: bold;
 }
+

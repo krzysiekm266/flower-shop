@@ -1,3 +1,11 @@
-<div class="shopping-cart">
+<section class="shopping-cart">
+  <div class="grid-area-list">
 
-</div>
+  </div>
+  <div class="grid-area-form">
+    <form (ngSubmit)="onSubmit()" [formGroup]="orderForm">
+      <label for="first-name">First name:</label>
+      <input type="text" name="first-name" id="first-name" [formControlName]="'firstName'">
+    </form>
+  </div>
+</section>

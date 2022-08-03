@@ -18,23 +18,23 @@ export class ProductComponent implements OnInit {
 
   }
   increase() {
-    if(this.quantity.value < 1000) {
-      this.quantity.setValue(this.quantity.value + 1 );
+    if(this.product.quantity < 1000) {
+      this.product.quantity++;
     }
   }
   decrease() {
-    if(this.quantity.value > 1) {
-      this.quantity.setValue(this.quantity.value - 1);
+    if(this.product.quantity > 1) {
+      this.product.quantity--;
     }
   }
   increaseBy(value:number) {
-    if(this.quantity.value < 1000) {
-      this.quantity.setValue(this.quantity.value + value);
+    if(this.product.quantity < 1000) {
+      this.product.quantity += value;
     }
   }
   decreaseBy(value:number) {
-    if(this.quantity.value > value) {
-      this.quantity.setValue(this.quantity.value - value);
+    if(this.product.quantity > value) {
+      this.product.quantity -= value;
     }
   }
 }
