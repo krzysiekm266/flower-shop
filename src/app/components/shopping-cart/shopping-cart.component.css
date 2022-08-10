@@ -19,6 +19,19 @@
 
 
 }
-form {
+.order-form {
+  display:flex;
+
+  gap:0.5rem;
+  padding: 1rem;
   background-color: aliceblue;
+}
+fieldset {
+  padding: 0.5rem;
+}
+legend {
+  padding-inline: 0.5rem;
+}
+input {
+  padding: 0.3rem;
 }

@@ -3,9 +3,15 @@
 
   </div>
   <div class="grid-area-form">
-    <form (ngSubmit)="onSubmit()" [formGroup]="orderForm">
-      <label for="first-name">First name:</label>
-      <input type="text" name="first-name" id="first-name" [formControlName]="'firstName'">
+    <form (ngSubmit)="onSubmit()" [formGroup]="orderForm" class="order-form">
+      <fieldset>
+        <legend> First name </legend>
+        <input type="text" name="first-name" id="first-name" [formControlName]="'firstName'">
+      </fieldset>
+      <fieldset>
+        <legend> Last name </legend>
+        <input type="text" name="last-name" id="last-name" [formControlName]="'lastName'">
+      </fieldset>
     </form>
   </div>
 </section>
