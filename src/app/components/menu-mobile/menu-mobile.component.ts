@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-menu-mobile',
@@ -10,9 +11,9 @@ export class MenuMobileComponent implements OnInit {
    *  buttonText is used as route parameter (category name for products list)
    */
   @Input() buttonText: string = '';
-
   @Output() clickCloseIcon = new EventEmitter();
-  constructor() {}
+  constructor( ) {
+  }
 
   ngOnInit(): void {}
 

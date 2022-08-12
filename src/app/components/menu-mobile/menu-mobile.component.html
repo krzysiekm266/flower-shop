@@ -1,13 +1,13 @@
 <div class="menu-mobile">
-  <app-navigation-button [routerLink]="['./products',buttonText]"
+  <!-- <app-navigation-button [routerLink]="['./products',buttonText]"
     (sendButtonText)="onButtonTextSend($event)"
     (click)="clickClose()"
     [text]="'Roses'"
     [bgImage]="'flower-roses.jpg'"
-    class=""
+    class="menu-mobile-link"
     >
-  </app-navigation-button>
-
+  </app-navigation-button> -->
+  <a [routerLink]="['products','Roses']">Roses</a>
   <a href="">bouquets</a>
    <a href=""> Flower Arrangements</a>
   <a href=""> Plants</a>

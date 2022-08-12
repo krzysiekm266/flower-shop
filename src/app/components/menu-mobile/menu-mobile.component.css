@@ -14,5 +14,6 @@
   color: black;
 }
 .menu-mobile-link {
-background-image: none !important;
+  width:100%;
+  min-height: 20px !important;
 }
