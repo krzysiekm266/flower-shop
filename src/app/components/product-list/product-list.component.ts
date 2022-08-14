@@ -21,17 +21,15 @@ export class ProductListComponent implements OnInit {
   //   this.lastCategory = this.category;
   // }
 
-  // ngDoCheck(): void {
-  //  if(this.category !== this.lastCategory) {
-  //   this.ngOnInit();
-  //  };
-  // }
+  ngDoCheck(): void {
+   if(this.category !== this.lastCategory) {
+    this.lastCategory = this.category;
+    this.ngOnInit();
+   };
+  }
 
   ngOnInit(): void {
      this._route.paramMap.subscribe(param => this.category = param.get('category') as string);
-    //  let bg = history.state['bg'] as string;
-    //  this.bgImage = bg;
-    //  this.description =  this._productService.getCategoryDescription(this.category);
 
     /**
      * Config service returns first element of categories array

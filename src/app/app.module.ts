@@ -30,7 +30,8 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
     LogoComponent,
     SocialMediaComponent,
     FooterComponent,
-    MenuMobileComponent
+    MenuMobileComponent,
+
   ],
   imports: [
     BrowserModule,

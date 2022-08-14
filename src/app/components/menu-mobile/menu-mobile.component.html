@@ -1,17 +1,15 @@
 <div class="menu-mobile">
-  <!-- <app-navigation-button [routerLink]="['./products',buttonText]"
-    (sendButtonText)="onButtonTextSend($event)"
-    (click)="clickClose()"
-    [text]="'Roses'"
-    [bgImage]="'flower-roses.jpg'"
-    class="menu-mobile-link"
-    >
-  </app-navigation-button> -->
-  <a [routerLink]="['products','Roses']">Roses</a>
-  <a href="">bouquets</a>
-   <a href=""> Flower Arrangements</a>
-  <a href=""> Plants</a>
-  <a href=""> Sunflowers</a>
-  <a href="">Summer flowers</a>
-  <a  (click)="clickClose()">Close</a>
+  <div class="menu">
+    <a [routerLink]="['products','Roses']" (click)="clickClose()">Roses</a>
+    <a [routerLink]="['products','Bouquets']" (click)="clickClose()">Bouquets</a>
+    <a [routerLink]="['products','Flower Arrangements']" (click)="clickClose()">Flower Arrangements</a>
+    <a [routerLink]="['products','Plants']" (click)="clickClose()">Plants</a>
+    <a [routerLink]="['products','Sunflowers']" (click)="clickClose()">Sunflowers</a>
+    <a [routerLink]="['products','Summer flowers']" (click)="clickClose()">Summer flowers</a>
+    <a (click)="clickClose()">Close</a>
+
+  </div>
+  <div class="transparent">
+
+  </div>
 </div>
