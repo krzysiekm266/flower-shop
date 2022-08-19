@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 60%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,9 @@
   background-color: antiquewhite;
   color: black;
 }
-.menu-mobile-link {
-  width:100%;
-  min-height: 20px !important;
+.menu {
+  width: 40%;
+}
+.transparent {
+color: aqua;
 }
