@@ -1,15 +1,15 @@
 <div class="menu-mobile">
-  <div class="menu">
-    <a [routerLink]="['products','Roses']" (click)="clickClose()">Roses</a>
-    <a [routerLink]="['products','Bouquets']" (click)="clickClose()">Bouquets</a>
-    <a [routerLink]="['products','Flower Arrangements']" (click)="clickClose()">Flower Arrangements</a>
-    <a [routerLink]="['products','Plants']" (click)="clickClose()">Plants</a>
-    <a [routerLink]="['products','Sunflowers']" (click)="clickClose()">Sunflowers</a>
-    <a [routerLink]="['products','Summer flowers']" (click)="clickClose()">Summer flowers</a>
-    <a (click)="clickClose()">Close</a>
+  <div class="menu menu-border">
+    <a class="menu-text menu-link-border" [routerLink]="['products','Roses']" (click)="clickClose()">Roses</a>
+    <a class="menu-text" [routerLink]="['products','Bouquets']" (click)="clickClose()">Bouquets</a>
+    <a class="menu-text" [routerLink]="['products','Flower Arrangements']" (click)="clickClose()">Flower Arrangements</a>
+    <a class="menu-text" [routerLink]="['products','Plants']" (click)="clickClose()">Plants</a>
+    <a class="menu-text" [routerLink]="['products','Sunflowers']" (click)="clickClose()">Sunflowers</a>
+    <a class="menu-text" [routerLink]="['products','Summer flowers']" (click)="clickClose()">Summer flowers</a>
+    <a  class="close-icon" (click)="clickClose()">Close</a>
 
   </div>
-  <div class="transparent">
+  <div class="menu-right" (click)="clickClose()">
 
   </div>
 </div>

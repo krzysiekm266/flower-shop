@@ -5,17 +5,71 @@
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 1em;
   z-index: 200;
-  background-color: antiquewhite;
   color: black;
 }
 .menu {
-  width: 40%;
+  position: relative;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1em;
+  background-image: linear-gradient(45deg,var(--color-bg-menu),white);
+  transition: all 2s ease-in-out 100ms;
 }
-.transparent {
-color: aqua;
+.menu-text {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+
+}
+.menu-border {
+  border-right: 2px solid black;
+}
+
+.menu-link-border {
+  border: 2px solid black;
+}
+.menu a {
+  width: 100%;
+  padding: 0.3rem;
+  margin:0.3rem
+}
+@media screen and (min-width:600px) {
+  .menu {
+    width: 35%;
+  }
+}
+.menu-right {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  background-color: rgb(228, 224, 224);
+  opacity: 0.7;
+}
+@media screen and (min-width:600px) {
+  .menu-right {
+    width: 65%;
+  }
+}
+.close-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px !important;
+  height: 30px;
+  top: 0;
+  right: 0;
+  background-color: black;
+  color: aliceblue;
+  border: 2px solid black;
+  font-weight: bold;
 }
