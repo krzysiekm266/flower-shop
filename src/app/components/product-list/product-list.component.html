@@ -6,7 +6,7 @@
     </section>
   </div>
   <div class="list-items grid-area-items">
-    <app-product *ngFor="let item of products" [product]="item"></app-product>
+    <app-product *ngFor="let item of products" [product]="item" (addToCart)="onAddToCart($event)"></app-product>
   </div>
   <a [routerLink]="'/'">back</a>
 </section>

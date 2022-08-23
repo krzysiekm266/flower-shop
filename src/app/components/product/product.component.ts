@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Product } from 'src/app/models/Product';
 
@@ -9,6 +9,7 @@ import { Product } from 'src/app/models/Product';
 })
 export class ProductComponent implements OnInit {
   @Input() product!:Product;
+  @Output() addToCart = new EventEmitter<Product>();
   quantity:FormControl;
   constructor() {
     this.quantity = new FormControl(1);
@@ -36,5 +37,8 @@ export class ProductComponent implements OnInit {
     if(this.product.quantity > value) {
       this.product.quantity -= value;
     }
+  }
+  clickAddToCart() {
+    this.addToCart.emit(this.product);
   }
 }

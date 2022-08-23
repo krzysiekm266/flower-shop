@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.component';
 import { ConfigService } from './services/config.service';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShoppingCartService } from './services/shopping-cart.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [ProductService,ConfigService,FormBuilder],
+  providers: [ProductService,ConfigService,ShoppingCartService,FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

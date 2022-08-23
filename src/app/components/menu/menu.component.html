@@ -6,14 +6,15 @@
     <span></span>
   </div>
   <div class=" menu-nav grid-area-menu-nav">
-    <a class="menu-link menu-text " [routerLink]="'/'" [routerLinkActive]="'menu-link-active'">home</a>
-    <a class="menu-link menu-text " >products</a>
-
-    <a class="menu-link menu-text "  href="">about</a>
+    <a class="menu-link menu-text " [routerLink]="'/'" >home</a>
+    <a class="menu-link menu-text " [routerLinkActive]="'menu-link-active'">products</a>
+    <a class="menu-link menu-text " [routerLinkActive]="'menu-link-active'" href="">about</a>
   </div>
   <div class=" cart grid-area-cart">
     <a [routerLink]="'shopping-cart'">
-      <fa-icon class="cart-icon"  [icon]="faCartShopping" [size]="'2x'"></fa-icon>
+      <fa-icon class="cart-icon" small [icon]="faCartShopping" [size]="'2x'"></fa-icon>
+      <fa-icon class="cart-icon" large [icon]="faCartShopping" [size]="'3x'"></fa-icon>
+
     </a>
   </div>
 </nav>

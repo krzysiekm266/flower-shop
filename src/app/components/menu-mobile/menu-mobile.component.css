@@ -21,15 +21,27 @@
   justify-content: center;
   padding: 1em;
   background-image: linear-gradient(45deg,var(--color-bg-menu),white);
-  transition: all 2s ease-in-out 100ms;
+
 }
 .menu-text {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
   color: black;
+  font-size: 1rem;
 
 }
+@media screen and (min-width:600px) {
+  .menu-text {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width:900px) {
+  .menu-text {
+    font-size: 2rem;
+  }
+}
+
 .menu-border {
   border-right: 2px solid black;
 }
@@ -37,16 +49,26 @@
 .menu-link-border {
   border: 2px solid black;
 }
+
 .menu a {
   width: 100%;
   padding: 0.3rem;
   margin:0.3rem
 }
+.menu a:hover {
+  color: aliceblue;
+}
 @media screen and (min-width:600px) {
   .menu {
-    width: 35%;
+    width: 50%;
   }
 }
+@media screen and (min-width:900px) {
+  .menu {
+    width: 60%;
+  }
+}
+
 .menu-right {
   width: 40%;
   height: 100%;

@@ -11,21 +11,23 @@
   <div class="grid-area-price border-2-black grid-area-padding ">
     <p>Price: {{product.price}}</p>
   </div>
-
-  <div class="grid-area-quantity border-2-black grid-area-padding ">
-    <button class="product-button product-button-text" style="color: red;" (click)="decrease()">-</button>
-    <button class="product-button product-button-text" style="font-size: 1.5rem;" (click)="decreaseBy(10)">-10</button>
-    <div class="quantity-counter">
-      <label class="quantity label-text"> {{ product.quantity }} </label>
-    </div>
-    <button class="product-button product-button-text" style="font-size: 1.5rem;" (click)="increaseBy(10)">+10</button>
-    <button class="product-button product-button-text" style="color: green;" (click)="increase()">+</button>
-
-  </div>
-
   <div class="grid-area-description border-2-black grid-area-padding ">
     <p>description: {{product.description}}</p>
   </div>
+  <div class="grid-area-quantity border-2-black grid-area-padding ">
+    <button class="product-button product-button-text" style="color: red;" (click)="decrease()">-</button>
+    <button class="product-button product-button-text" style="font-size: 1.5rem;color:aliceblue" (click)="decreaseBy(10)">-10</button>
+    <div class="quantity-counter">
+      <label class="quantity label-text"> {{ product.quantity }} </label>
+    </div>
+    <button class="product-button product-button-text" style="font-size: 1.5rem; color:aliceblue" (click)="increaseBy(10)">+10</button>
+    <button class="product-button product-button-text" style="color: green;" (click)="increase()">+</button>
+
+  </div>
+  <div class="grid-area-add-button">
+    <button class="add-button add-button-text" (click)="clickAddToCart()"><strong>Add</strong> to cart {{product.quantity}} x {{product.name}}</button>
+  </div>
+
 
 
 </div>
