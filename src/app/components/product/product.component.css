@@ -16,15 +16,19 @@
 
 .grid-area-name {
   grid-area: name;
-  background-color: rgb(123, 233, 128);
+  /* background-color: rgb(123, 233, 128); */
   min-height: 5rem;
 }
 .product-name {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   height: 100%;
 
+}
+.product-name-text {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .grid-area-price {
   grid-area: price;

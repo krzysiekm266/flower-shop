@@ -10,12 +10,13 @@ import { Product } from 'src/app/models/Product';
 export class ProductComponent implements OnInit {
   @Input() product!:Product;
   @Output() addToCart = new EventEmitter<Product>();
-  quantity:FormControl;
-  constructor() {
-    this.quantity = new FormControl(1);
-   }
+  quantity:FormControl = new FormControl(1);
+  @Input() bgColor:string = '';
+
+  constructor() { }
 
   ngOnInit(): void {
+    this.bgColor = 'var(--color-bg-'+ (this.product.category.toLowerCase().replace(' ','-')) +')';
 
   }
   increase() {

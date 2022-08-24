@@ -1,38 +1,35 @@
 import { Injectable } from '@angular/core';
-import { map, Observable, of, tap } from 'rxjs';
+import {  Observable,of } from 'rxjs';
+import { tap,map } from "rxjs/operators";
 import { Product } from '../models/Product';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ShoppingCartService {
-  private _order$: Observable<Product[]> | null;
+  private _order$: Observable<Product[]> ;
   constructor() {
-    this._order$ = new Observable<Product[]>();
+    this._order$ = of([]);
   }
 
   addItem(product: Product): Observable<Product[]> {
-    if (this._order$ == null) {
-      this._order$ = new Observable<Product[]>();
-    }
+  return this._order$.pipe(
+    tap(order => order.push(product)),
+  );
+  // return this._order$;
 
-    return this._order$.pipe(
-      tap((order) => {
-        order.push(product);
-      })
-    );
   }
   deleteItem(product: Product) {
-    this._order$?.pipe(
+    this._order$.pipe(
       map((order) => {
         return order.filter((item) => item.id !== product.id);
       })
     );
   }
   confirmOrder() {
-    this._order$ = null;
+    // this._order$ = null;
   }
-  getOrderList(): Observable<Product[]> | null {
+  getOrderList(): Observable<Product[]>  {
     return this._order$;
   }
 }

@@ -11,11 +11,12 @@ import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 export class ShoppingCartComponent implements OnInit {
   orderForm!: FormGroup;
   @Input() cartItems:Product[] = [];
+  total:number = 0.0;
   constructor(private _fb: FormBuilder,private _shoppingCartService:ShoppingCartService) {}
 
   ngOnInit(): void {
-    this._shoppingCartService.getOrderList()?.subscribe(items => this.cartItems = items);
-
+    this._shoppingCartService.getOrderList().subscribe(items => this.cartItems = items);
+    this.cartItems.forEach(item => { this.total += (item.quantity * item.price)})
     this.orderForm = this._fb.group({
       firstName: ['',Validators.required],
       lastName: [''],
@@ -23,6 +24,8 @@ export class ShoppingCartComponent implements OnInit {
         city: [''],
       }),
     });
+    document.scrollingElement?.scroll(0, 0);
+
   }
   onSubmit() {
     window.alert('Thank you for buying in our shop!');

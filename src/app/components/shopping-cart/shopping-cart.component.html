@@ -1,12 +1,31 @@
 <section class="shopping-cart">
   <div class="grid-area-list">
-    <div *ngFor="let item of cartItems">
-      <p>ID:{{item.id}}</p>
-      <p>Category:{{item.category}}</p>
-      <p>Name:{{item.name}}</p>
-      <p>Qty:{{item.quantity}}</p>
-      <p>Price{{item.price}}</p>
-      <p>Sum:{{item.quantity * item.price}}</p>
+    <table>
+      <tr>
+        <th>Products</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+      <tr *ngFor="let item of cartItems">
+        <td>
+          {{item.name}}
+        </td>
+        <td>
+          {{item.quantity}}
+        </td>
+        <td>
+          {{item.price}}
+        </td>
+        <td>
+          {{item.quantity * item.price}}
+        </td>
+      </tr>
+
+    </table>
+
+    <div class="total">
+      <p> <strong>Total value:</strong> {{total}} </p>
     </div>
   </div>
   <div class="grid-area-form">
@@ -23,6 +42,7 @@
         <legend> City </legend>
         <input type="text" name="city" id="city"  [formControlName]="'city'">
       </fieldset>
+      <button [disabled]="!orderForm.valid">Confirm order</button>
     </form>
   </div>
 </section>

@@ -24,6 +24,7 @@ export class ProductListComponent implements OnInit {
   @Input() bgImage: string = '';
   @Input() products: Product[] = [];
   private lastCategory: string = '';
+  @Input() shadow:string = '';
   constructor(
     private _route: ActivatedRoute,
     private _productService: ProductService,
@@ -39,6 +40,7 @@ export class ProductListComponent implements OnInit {
     if (this.category !== this.lastCategory) {
       this.lastCategory = this.category;
       this.ngOnInit();
+
     }
   }
 
@@ -46,7 +48,7 @@ export class ProductListComponent implements OnInit {
     this._route.paramMap.subscribe(
       (param) => (this.category = param.get('category') as string)
     );
-
+      this.shadow = '3px 3px 2px '+'var(--color-bg-'+this.category.toLowerCase().replace(' ','-')+')';
     /**
      * Config service returns first element of categories array
      * Category name should be one of the kind so config service always returns only one category name description
@@ -62,8 +64,8 @@ export class ProductListComponent implements OnInit {
     this._productService
       .getProductsByCategory(this.category)
       .subscribe((products) => (this.products = products));
+
     document.scrollingElement?.scroll(0, 0);
-    //  console.log(this.bgImage)
   }
   onAddToCart(product: Product) {
 

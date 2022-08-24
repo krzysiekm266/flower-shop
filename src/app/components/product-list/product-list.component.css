@@ -29,6 +29,9 @@
   background-color: var(--color-bg-product-list);
 
 }
+.category-text {
+  text-shadow: 3px 3px 2px white;
+}
 .category-bg-img {
   background-position: center;
   background-repeat: no-repeat;

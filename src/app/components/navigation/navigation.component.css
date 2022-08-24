@@ -15,22 +15,22 @@
   margin-top: 0em;
 }
 .bg-color-roses {
-  background-color: rgb(255, 0, 0);
+  background-color: var(--color-bg-roses);
 }
 .bg-color-bouquets {
-  background-color: burlywood;
+  background-color: var(--color-bg-bouquets);
 }
 .bg-color-flower-arrangements {
-  background-color: rgb(104, 193, 245);
+  background-color: var(--color-bg-flower-arrangements);
 }
 .bg-color-plants {
-  background-color: coral;
+  background-color: var(--color-bg-plants);
 }
 .bg-color-sunflowers {
-  background-color: rgb(216, 152, 13);
+  background-color: var(--color-bg-sunflowers);
 }
 .bg-color-summer-flowers {
-  background-color:  rgb(54, 218, 54);
+  background-color:  var(--color-bg-summer-flowers);
 }
 @media screen and (min-width: 600px) {
   .navigation {

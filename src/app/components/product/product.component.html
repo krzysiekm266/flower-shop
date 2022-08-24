@@ -4,8 +4,8 @@
      {{product.category}}
   </div> -->
 
-  <div class="grid-area-name border-2-black grid-area-padding ">
-    <p class="product-name">{{product.name}}</p>
+  <div class="grid-area-name border-2-black grid-area-padding " [ngStyle]="{'background-color':bgColor}">
+    <p class="product-name product-name-text">{{product.name}}</p>
   </div>
 
   <div class="grid-area-price border-2-black grid-area-padding ">
@@ -14,7 +14,7 @@
   <div class="grid-area-description border-2-black grid-area-padding ">
     <p>description: {{product.description}}</p>
   </div>
-  <div class="grid-area-quantity border-2-black grid-area-padding ">
+  <div class="grid-area-quantity  grid-area-padding ">
     <button class="product-button product-button-text" style="color: red;" (click)="decrease()">-</button>
     <button class="product-button product-button-text" style="font-size: 1.5rem;color:aliceblue" (click)="decreaseBy(10)">-10</button>
     <div class="quantity-counter">
