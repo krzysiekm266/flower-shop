@@ -6,22 +6,22 @@ import { FLOWERS, Product } from '../models/Product';
   providedIn: 'root'
 })
 export class ProductService {
-  private _products:Observable<Product[]>;
+  private _products$:Observable<Product[]>;
   // categories:Category[];
   constructor() {
-    this._products = of(FLOWERS);
+    this._products$ = of(FLOWERS);
     // this.categories = CATEGORIES;
   }
   getAllProducts():Observable<Product[]> {
-    return this._products;
+    return this._products$;
   }
   getProductsByCategory(category:string):Observable<Product[]> {
-    return this._products.pipe(
+    return this._products$.pipe(
       map(products => { return products.filter( item => item.category == category  ) }),
     );
   }
   getProductById(id:number):Observable<Product> {
-    return this._products.pipe(
+    return this._products$.pipe(
       map(products => { return products.find( item => item.id == id  ) }),
     ) as Observable<Product>;
   }
