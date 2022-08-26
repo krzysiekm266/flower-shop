@@ -18,7 +18,6 @@ import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.compon
 import { ConfigService } from './services/config.service';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShoppingCartService } from './services/shopping-cart.service';
-import { ShoppingCartItemComponent } from './components/shopping-cart-item/shopping-cart-item.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,7 @@ import { ShoppingCartItemComponent } from './components/shopping-cart-item/shopp
     SocialMediaComponent,
     FooterComponent,
     MenuMobileComponent,
-    ShoppingCartItemComponent,
+
 
   ],
   imports: [

@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { Product } from 'src/app/models/Product';
@@ -29,5 +30,14 @@ export class ShoppingCartComponent implements OnInit {
   }
   onSubmit() {
     window.alert('Thank you for buying in our shop!');
+  }
+  deleteOrderItem(index:string) {
+    this.cartItems.splice(parseInt(index),1);
+
+  }
+  totalValue():number {
+    this.total = 0.0;
+    this.cartItems.forEach(item => { this.total += (item.quantity * item.price)})
+    return this.total;
   }
 }
