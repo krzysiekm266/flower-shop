@@ -32,4 +32,9 @@ export class ShoppingCartService {
   getOrderList(): Observable<Product[]>  {
     return this._order$;
   }
+  getCounter():number {
+    let counter = 0;
+    this._order$.subscribe(order => counter = order.length);
+    return counter;
+  }
 }

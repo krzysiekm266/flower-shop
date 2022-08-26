@@ -12,8 +12,10 @@
   </div>
   <div class=" cart grid-area-cart">
     <a [routerLink]="'shopping-cart'">
+
       <fa-icon class="cart-icon" small [icon]="faCartShopping" [size]="'2x'"></fa-icon>
       <fa-icon class="cart-icon" large [icon]="faCartShopping" [size]="'3x'"></fa-icon>
+      <span *ngIf="cartCount() > 0" class="cart-icon-counter cart-icon-counter-text">{{ cartCounter }}</span>
 
     </a>
   </div>
