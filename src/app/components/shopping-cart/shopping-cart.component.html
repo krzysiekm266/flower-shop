@@ -10,18 +10,25 @@
       <tr *ngFor="let item of cartItems;index as i" >
 
         <td>
-          <p #itemId hidden>{{i}}</p>
-          <button (click)="deleteOrderItem(itemId.tagName)">Delete</button>
-          {{item.name}}
+          <div class="item-name">
+            <p #itemId hidden>{{i}}</p>
+            <button class="delete-button" (click)="deleteOrderItem(itemId.innerText)">Delete</button>
+            <p class="name">{{item.name}}</p>
+          </div>
+        </td>
+        <td >
+          <div class="quantity">
+            <button class="quantity-button" (click)="orderItemQuantityDecrease(itemId.innerText)">-</button>
+            <p class="counter">{{item.quantity}}</p>
+            <button class="quantity-button" (click)="orderItemQuantityIncrease(itemId.innerText)" >+</button>
+          </div>
+
         </td>
         <td>
-          {{item.quantity}}
+          <p class="price"> {{item.price}} </p>
         </td>
         <td>
-          {{item.price}}
-        </td>
-        <td>
-          {{item.quantity * item.price}}
+         <p class="item-total"> {{item.quantity * item.price}}</p>
         </td>
 
       </tr>
@@ -34,7 +41,7 @@
     </div>
   </div>
   <div class="grid-area-form">
-    <form (ngSubmit)="onSubmit()" [formGroup]="orderForm" class="order-form">
+    <form (ngSubmit)="onSubmit()" [formGroup]="orderForm" class="order-form" >
       <fieldset>
         <legend> First name </legend>
         <input type="text" name="first-name" id="first-name" [formControlName]="'firstName'">

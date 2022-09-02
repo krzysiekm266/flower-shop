@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { Product } from 'src/app/models/Product';
 import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
+import { tap } from "rxjs/operators";
 
 @Component({
   selector: 'app-shopping-cart',
@@ -20,19 +21,39 @@ export class ShoppingCartComponent implements OnInit {
     this.cartItems.forEach(item => { this.total += (item.quantity * item.price)})
     this.orderForm = this._fb.group({
       firstName: ['',Validators.required],
-      lastName: [''],
+      lastName: ['',Validators.required],
       address: this._fb.group({
-        city: [''],
+        city: ['',Validators.required],
       }),
     });
+    this.disableEmptyOrderForm();
     document.scrollingElement?.scroll(0, 0);
 
   }
+  private disableEmptyOrderForm() {
+    this.cartItems.length > 0 ? this.orderForm.enable() : this.orderForm.disable();
+
+  }
   onSubmit() {
+    this._shoppingCartService.confirmOrder().subscribe();
+    this.orderForm.reset('');
     window.alert('Thank you for buying in our shop!');
+
+
+  }
+  orderItemQuantityIncrease(index:string) {
+    this.cartItems[(index as unknown as number)].quantity++;
+  }
+  orderItemQuantityDecrease(index:string) {
+    if( this.cartItems[(index as unknown as number)].quantity > 1 )
+     this.cartItems[(index as unknown as number)].quantity--;
+
   }
   deleteOrderItem(index:string) {
-    this.cartItems.splice(parseInt(index),1);
+
+    this._shoppingCartService.deleteItem(index as unknown as number ).subscribe();
+    this.disableEmptyOrderForm();
+    if(this.cartItems.length == 0) this.orderForm.reset('');
 
   }
   totalValue():number {

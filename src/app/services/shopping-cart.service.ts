@@ -19,15 +19,21 @@ export class ShoppingCartService {
   // return this._order$;
 
   }
-  deleteItem(product: Product) {
-    this._order$.pipe(
-      map((order) => {
-        return order.filter((item) => item.id !== product.id);
+  deleteItem(index:number):Observable<Product[]> {
+    return this._order$.pipe(
+      tap((order) => {
+        return order.splice(index,1);
       })
     );
+
   }
-  confirmOrder() {
-    // this._order$ = null;
+  confirmOrder():Observable<Product[]> {
+    return this._order$.pipe(
+      tap((order) => {
+        return order.splice(0,order.length);
+      })
+    );
+
   }
   getOrderList(): Observable<Product[]>  {
     return this._order$;
