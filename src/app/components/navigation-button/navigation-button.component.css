@@ -4,6 +4,7 @@
   justify-content: center;
   min-height: 4em;
   padding: 0.5em;
+  transition:  mix-blend-mode 1000ms ease-in 200ms;
 }
 @media screen and (min-width: 600px) {
   .navigation-button {
