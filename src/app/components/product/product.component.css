@@ -33,7 +33,12 @@
 .grid-area-price {
   grid-area: price;
   display: grid;
-  place-content: center;
+  place-content: center ;
+  font-size: 1.2rem;
+
+}
+.grid-area-price p {
+  text-align: center;
 
 }
 .grid-area-quantity {
@@ -52,6 +57,7 @@
 }
 .grid-area-add-button {
   grid-area: add-button;
+  padding: 2px;
 }
 .border-2-black {
   border: 2px solid black;
@@ -112,7 +118,7 @@ label.quantity {
   padding: 0.3rem;
   background-color: black;
   color: aliceblue;
-  border: 2px solid black;
+  border: 2px solid rgb(184, 183, 182);
 }
 .add-button:hover {
   cursor: pointer;

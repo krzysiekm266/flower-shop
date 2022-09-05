@@ -6,17 +6,33 @@
     <span></span>
   </div>
   <div class=" menu-nav grid-area-menu-nav">
-    <a class="menu-link menu-text " [routerLink]="'/'" >home</a>
-    <a class="menu-link menu-text " [routerLinkActive]="'menu-link-active'">products</a>
+    <a class="menu-link menu-text "  [routerLink]="'/'">home</a>
+    <a class="menu-link menu-text menu-link-submenu"  >products
+      <div class="submenu" #prsubmenu>
+        <a class="" [routerLink]="['products','Roses']" >Roses</a>
+        <a class="" [routerLink]="['products','Bouquets']" >Bouquets</a>
+        <a class="" [routerLink]="['products','Flower Arrangements']">Flower Arrangements</a>
+        <a class="" [routerLink]="['products','Plants']" >Plants</a>
+        <a class="" [routerLink]="['products','Sunflowers']" >Sunflowers</a>
+        <a class="" [routerLink]="['products','Summer flowers']" >Summer flowers</a>
+      </div>
+    </a>
     <a class="menu-link menu-text " [routerLinkActive]="'menu-link-active'" href="">about</a>
   </div>
-  <div class=" cart grid-area-cart">
-    <a [routerLink]="'shopping-cart'">
+  <div class="mobile-menu-nav grid-area-menu-nav">
+    <a  [routerLink]="'/'" >
+      <fa-icon class=" mobile-menu-nav-icon"  [icon]="faHouse" [size]="'2x'"></fa-icon>
+    </a>
+    <a  [routerLink]="'/'" >
+      <fa-icon class=" mobile-menu-nav-icon"  [icon]="faCircleQuestion" [size]="'2x'"></fa-icon>
+    </a>
 
+  </div>
+  <div class=" cart grid-area-cart">
+    <a [routerLink]="'shopping-cart'" >
       <fa-icon class="cart-icon" small [icon]="faCartShopping" [size]="'2x'"></fa-icon>
       <fa-icon class="cart-icon" large [icon]="faCartShopping" [size]="'3x'"></fa-icon>
       <span *ngIf="cartCount() > 0" class="cart-icon-counter cart-icon-counter-text">{{ cartCounter }}</span>
-
     </a>
   </div>
 </nav>

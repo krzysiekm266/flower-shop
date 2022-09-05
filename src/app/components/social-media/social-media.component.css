@@ -2,7 +2,7 @@
   display: grid;
   grid-template-areas: 'contact social-icons';
   background-color: var(--color-bg-social-media);
-  height: 2.5em;
+  min-height:4rem;
   padding-inline: 1em;
 }
 .grid-area-contact {

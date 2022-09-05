@@ -1,21 +1,36 @@
 .shopping-cart {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-columns: 1fr;
+  width:auto;
   margin-top: 1rem;
-  gap:1rem;
-  padding-inline: 0.5rem;
+  row-gap:1rem;
+  padding-inline: 0.1rem;
+
   grid-template-areas:
+  'order-title'
   'order-list'
   'order-form';
 
 }
-.grid-area-list {
-  grid-area: order-list;
-  background-color: aliceblue;
-
+@media screen and (min-width:600px) {
+  .shopping-cart {
+    padding-inline: 0.5rem;
+  }
 
 }
+
+.grid-area-title {
+  grid-area: order-title;
+}
+
+.grid-area-list {
+
+  grid-area: order-list;
+  background-color: aliceblue;
+  margin-inline: 0.5rem;
+
+}
+
 .grid-area-form {
   grid-area: order-form;
   display: grid;
@@ -23,7 +38,13 @@
   padding: 0.5rem;
   place-content: center;
 
-
+}
+.order-title {
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+  padding: 1rem;
+  margin-inline: 0.5rem;
 }
 .order-form {
   display:flex;
@@ -35,7 +56,8 @@
 }
 @media screen and (min-width:900px){
   .order-form {
-    width: 50vw;
+    /* width: 55vw; */
+    width: 800px;
   }
 }
 .total {
@@ -53,8 +75,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 3rem;
+  height: 1.6rem;
 }
 .delete-button {
   display: flex;
@@ -68,7 +90,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:1rem;
+
 }
 .item-name {
   display: flex;
@@ -80,7 +102,12 @@
 }
 .counter {
   width: 100%;
-  min-width: 4rem;
+  /* min-width: 4rem; */
+}
+@media screen and (min-width:600px){
+  .counter {
+    min-width:4rem;
+  }
 }
 .name {
   width: 100%;
@@ -96,7 +123,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  min-width: 150px;
+  /* min-width: 150px; */
+}
+.confirm-button {
+  min-height: 2rem;
+  padding: 0.3rem;
+  border: none;
+  border:1px solid black;
+  font-weight: bold;
+  letter-spacing: 0.125rem;
+  background-color: rgb(194, 245, 194);
+}
+.confirm-button:hover:not([disabled]) {
+  background-color: rgb(64, 216, 64);
 }
 fieldset {
   padding: 0.5rem;

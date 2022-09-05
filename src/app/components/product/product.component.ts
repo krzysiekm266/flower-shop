@@ -40,6 +40,17 @@ export class ProductComponent implements OnInit {
     }
   }
   clickAddToCart() {
-    this.addToCart.emit(this.product);
+    const product:Product = {
+      id:this.product.id,
+      category:this.product.category,
+      name:this.product.name,
+      quantity:this.product.quantity,
+      description:this.product.description,
+      price:this.product.price,
+      picturePath:this.product.picturePath
+    };
+    this.product.quantity = 1;
+    this.addToCart.emit(product);
+
   }
 }

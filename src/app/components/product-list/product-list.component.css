@@ -2,20 +2,31 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
+  'title'
   'info'
   'items';
-  margin-inline: 0.5em;
+  margin-inline: 0.5rem;
   gap:1em;
-
 }
-.product-list:first-child {
-  margin-top: 1em;
+
+
+.grid-area-title {
+  grid-area: title;
 }
 .grid-area-info {
   grid-area: info;
 }
 .grid-area-items {
   grid-area: items;
+}
+.list-title {
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+  padding: 1rem;
+}
+.product-list:first-child {
+  margin-top: 1em;
 }
 .list-info {
   border: 2px solid black;

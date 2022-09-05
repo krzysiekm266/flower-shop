@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping,faFan,faCircleQuestion,faHouse } from '@fortawesome/free-solid-svg-icons';
 import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 @Component({
   selector: 'app-menu',
@@ -9,6 +9,9 @@ import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 export class MenuComponent implements OnInit {
   //fort awsome icons
   faCartShopping = faCartShopping;
+  faFan = faFan;
+  faCircleQuestion = faCircleQuestion;
+  faHouse = faHouse;
   //properties
   @Output() hamburgerClick = new EventEmitter();
   cartCounter:number = 0;
