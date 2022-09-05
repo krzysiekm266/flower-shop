@@ -17,7 +17,7 @@ export class ShoppingCartComponent implements OnInit {
 
   ngOnInit(): void {
     this._shoppingCartService.getOrderList().subscribe(items => this.cartItems = items);
-    this.cartItems.forEach(item => { this.total += (item.quantity * item.price)})
+    this.cartItems.forEach(item => { this.total += (item.quantity * item.price)});
     this.orderForm = this._fb.group({
       firstName: ['',Validators.required],
       lastName: [''],
