@@ -18,7 +18,7 @@ export class MenuMobileComponent implements OnInit {
   ngOnInit(): void {}
 
   clickClose() {
-    return this.clickCloseIcon.emit();
+    this.clickCloseIcon.emit();
   }
   onButtonTextSend(text: string) {
     this.buttonText = text;
