@@ -4,7 +4,7 @@
   justify-content: center;
   min-height: 4em;
   padding: 0.5em;
-  transition:  mix-blend-mode 1000ms ease-in 200ms;
+
 }
 @media screen and (min-width: 600px) {
   .navigation-button {
@@ -21,7 +21,7 @@
 }
 .navigation-button:hover {
   cursor: pointer;
-  mix-blend-mode: initial;
+  mix-blend-mode:  initial;
   text-decoration: underline;
   text-underline-offset: 0.5em;
 }
@@ -38,6 +38,9 @@
 @media screen and (min-width: 600px) {
   .button-text {
     font-size: 2.3rem;
+  }
+  .navigation-button {
+    min-height: 6em;
   }
 }
 @media screen and (min-width: 800px) {

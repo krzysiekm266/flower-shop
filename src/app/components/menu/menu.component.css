@@ -156,35 +156,40 @@ fa-icon[large] {
 }
 .menu-link {
   text-decoration: none;
+  z-index: 10;
 }
 .menu-link-submenu {
   position: relative;
   z-index: 150;
 }
 .menu-link-submenu:hover > .submenu {
-  display: flex;
-
-  height: max-content;
+  height: 300px;
+ padding: 1rem;
+ border: 2px solid black;
 }
 .submenu {
   position: absolute;
   z-index: 150;
-
+  display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 0.5rem;
-  bottom: -250px;
+  top: 80px;
   left: 0;
-  padding: 1rem;
   background-image: linear-gradient(45deg,var(--color-bg-menu),white);
-  border: 2px solid black;
+  border: 0px solid black;
+  padding: 0rem;
   height: 0px;
-  transition: height 1s ease-out 0.5ms;
-  display: none;
+  transition: border 0.3s ease-in, padding 0.4s ease-in,height 0.4s ease-in ;
+
 }
 .hide-submenu {
-  display: none;
+  /* display: none; */
+  transition: height 0.5s ease-in ;
+  height: 0px;
+  /* visibility: hidden; */
 }
 .submenu a {
   font-size: 1rem;
