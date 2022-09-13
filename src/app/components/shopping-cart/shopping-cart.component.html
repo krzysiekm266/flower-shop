@@ -1,9 +1,9 @@
 <section class="shopping-cart">
   <div class=" order-title grid-area-title">
-    <h2>Shopping Cart</h2>
+    <h2>Shopping Cart <span *ngIf="cartItems.length == 0" class="msg-empty"> is empty.</span></h2>
   </div>
-  <div class="grid-area-list">
-    <table>
+  <div class="grid-area-list" [class.hide-order-table]="cartItems.length == 0">
+    <table >
       <tr>
         <th>Products</th>
         <th>Quantity</th>
@@ -24,7 +24,6 @@
             <p class="counter">{{item.quantity}}</p>
             <button class="quantity-button" (click)="orderItemQuantityIncrease(itemId.innerText)" >+</button>
           </div>
-
         </td>
         <td>
           <p class="price"> {{item.price}} </p>
@@ -43,7 +42,7 @@
     </div>
   </div>
   <div class="grid-area-form">
-    <form (ngSubmit)="onSubmit()" [formGroup]="orderForm" class="order-form" >
+    <form (ngSubmit)="onSubmit()" [formGroup]="orderForm" class="order-form" [class.hide-order-form]="cartItems.length == 0">
       <fieldset>
         <legend> First name </legend>
         <input type="text" name="first-name" id="first-name" [formControlName]="'firstName'">
@@ -56,6 +55,9 @@
         <legend> City </legend>
         <input type="text" name="city" id="city"  [formControlName]="'city'">
       </fieldset>
+      <p *ngIf="orderForm.getError('required','firstName') || orderForm.getError('minlength','firstName')" style="color:red">Firstname is required,min 3 characters.</p>
+      <p *ngIf="orderForm.getError('required','lastName') || orderForm.getError('minlength','lastName')" style="color:red">Lastname is required,min 3 characters.</p>
+      <p *ngIf="orderForm.getError('required','address.city') || orderForm.getError('minlength','address.city')" style="color:red">City is required,min 3 characters.</p>
       <button class="confirm-button" [disabled]="!orderForm.valid">Confirm order</button>
     </form>
   </div>

@@ -60,12 +60,12 @@
 }
 @media screen and (min-width:600px) {
   .menu {
-    width: 50%;
+    width: auto;
   }
 }
 @media screen and (min-width:900px) {
   .menu {
-    width: 60%;
+    width: auto;
   }
 }
 
@@ -78,7 +78,7 @@
 }
 @media screen and (min-width:400px) {
   .menu-right {
-    width: 65%;
+    width: 100%;
   }
 }
 .close-icon {

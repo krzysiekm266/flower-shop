@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { Product } from 'src/app/models/Product';
 import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 import { tap } from "rxjs/operators";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -14,19 +15,20 @@ export class ShoppingCartComponent implements OnInit {
   orderForm!: FormGroup;
   @Input() cartItems:Product[] = [];
   total:number = 0.0;
-  constructor(private _fb: FormBuilder,private _shoppingCartService:ShoppingCartService) {}
+  constructor(private _fb: FormBuilder,private _shoppingCartService:ShoppingCartService,private _router:Router) {}
 
   ngOnInit(): void {
     this._shoppingCartService.getOrderList().subscribe(items => this.cartItems = items);
     this.cartItems.forEach(item => { this.total += (item.quantity * item.price)});
     this.orderForm = this._fb.group({
-      firstName: ['',Validators.required],
-      lastName: ['',Validators.required],
+      firstName: ['',[Validators.required,Validators.minLength(3)]],
+      lastName: ['',[Validators.required,Validators.minLength(3)]],
       address: this._fb.group({
-        city: ['',Validators.required],
+        city: [' ',[Validators.required,Validators.minLength(3)]],
       }),
     });
     this.disableEmptyOrderForm();
+    this.orderForm.updateValueAndValidity();
     document.scrollingElement?.scroll(0, 0);
 
   }
@@ -38,7 +40,7 @@ export class ShoppingCartComponent implements OnInit {
     this._shoppingCartService.confirmOrder().subscribe();
     this.orderForm.reset('');
     window.alert('Thank you for buying in our shop!');
-
+    this._router.navigateByUrl('/');
 
   }
   orderItemQuantityIncrease(index:string) {

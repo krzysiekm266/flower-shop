@@ -54,11 +54,21 @@
   padding: 1rem;
   background-color: aliceblue;
 }
+.hide-order-form {
+  display: none;
+}
+.hide-order-table {
+  display: none;
+}
 @media screen and (min-width:900px){
   .order-form {
     /* width: 55vw; */
     width: 800px;
   }
+}
+.msg-empty {
+  font-size: 1rem;
+  color: red;
 }
 .total {
   display: flex;

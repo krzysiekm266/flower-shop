@@ -21,9 +21,9 @@ export class MenuComponent implements OnInit {
     this.cartCounter = this._shoppingCartService.getCounter();
   }
   onHamburgerClick() {
-    return this.hamburgerClick.emit();
+    this.hamburgerClick.emit();
   }
-  cartCount() {
+  cartCount():number {
     this.cartCounter = this._shoppingCartService.getCounter();
     return this._shoppingCartService.getCounter();
   }
