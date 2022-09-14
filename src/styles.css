@@ -47,7 +47,7 @@ html,body {
 
 body {
 
-  background-image: url('./assets/images/bg/bg-main-2.jpg');
+  background-image: url('/assets/images/bg/bg-main-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
