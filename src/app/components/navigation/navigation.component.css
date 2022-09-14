@@ -41,7 +41,21 @@
     'sunflowers summer-flowers';
 
   }
+};
+@media screen and (min-width: 900px) {
+  .navigation {
+    grid-template-areas:
+    'roses bouquets bouquets plants'
+    'flower-arrangements flower-arrangements flower-arrangements  plants'
+    'sunflowers sunflowers summer-flowers summer-flowers';
 
+  }
+  .nav-grid-area-plants {
+    grid-area: plants;
+    display: grid;
+
+
+  }
 };
 .nav-link-size {
   width: auto;
