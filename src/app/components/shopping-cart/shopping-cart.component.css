@@ -142,10 +142,11 @@
   border:1px solid black;
   font-weight: bold;
   letter-spacing: 0.125rem;
-  background-color: rgb(194, 245, 194);
+  background-color: rgb(86, 206, 86);
 }
 .confirm-button:hover:not([disabled]) {
   background-color: rgb(64, 216, 64);
+  cursor: pointer;
 }
 fieldset {
   padding: 0.5rem;

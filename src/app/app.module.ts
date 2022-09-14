@@ -18,6 +18,7 @@ import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.compon
 import { ConfigService } from './services/config.service';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShoppingCartService } from './services/shopping-cart.service';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ShoppingCartService } from './services/shopping-cart.service';
     SocialMediaComponent,
     FooterComponent,
     MenuMobileComponent,
+    AboutComponent,
 
 
   ],

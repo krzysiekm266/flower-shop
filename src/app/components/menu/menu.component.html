@@ -17,14 +17,14 @@
         <a class="" [routerLink]="['products','Summer flowers']" >Summer flowers</a>
       </div>
     </a>
-    <a class="menu-link menu-text " [routerLinkActive]="'menu-link-active'" href="">about</a>
+    <a class="menu-link menu-text " [routerLink]="'about'" [routerLinkActive]="'menu-link-active'" >about</a>
   </div>
   <div class="mobile-menu-nav grid-area-menu-nav">
     <a  [routerLink]="'/'" >
       <fa-icon class=" mobile-menu-nav-icon"  [icon]="faHouse" [size]="'2x'"></fa-icon>
     </a>
-    <a  [routerLink]="'/'" >
-      <fa-icon class=" mobile-menu-nav-icon"  [icon]="faCircleQuestion" [size]="'2x'"></fa-icon>
+    <a  [routerLink]="'about'"  >
+      <fa-icon class=" mobile-menu-nav-icon" [icon]="faCircleQuestion" [size]="'2x'"></fa-icon>
     </a>
 
   </div>
